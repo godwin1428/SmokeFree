@@ -1,0 +1,169 @@
+================================================================================
+PROJECT DESCRIPTION: SMOKEFREE
+Tagline: Breathe Fresh, Live Free
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+SmokeFree is a bilingual (English & Tamil), dual-portal mobile health application 
+developed with Flutter. It connects individuals recovering from nicotine dependence 
+with their doctors and pulmonologists. The app pairs real-time, AI-powered cognitive 
+and physiological craving management for patients with a clinical telemetry and risk 
+triaging dashboard for healthcare providers.
+
+
+2. PURPOSE & PROBLEM STATEMENT
+--------------------------------------------------------------------------------
+* The Problem:
+  - Acute tobacco cravings typically peak and dissipate within a 3 to 5 minute 
+    window. During these intense situational triggers (stress, meals, social pressure), 
+    individuals rarely have access to immediate cognitive behavioral therapy (CBT) 
+    or clinical support.
+  - Doctors and healthcare providers only evaluate patients weeks apart in clinics, 
+    leaving them blind to day-to-day craving spikes, emotional triggers, and minor 
+    slips until full relapse has already occurred.
+
+* The Purpose:
+  - SmokeFree equips patients with an on-demand "Craving SOS Shield" right when 
+    impulses strike, while granting clinicians continuous visibility into patient 
+    recovery adherence, risk ratings, and slip telemetry to prevent relapse.
+
+
+3. TARGET AUDIENCE (WHO IT SERVES)
+--------------------------------------------------------------------------------
+1. Patients / Quitters:
+   Individuals seeking to quit smoking or tobacco use who require real-time craving 
+   rescue tools, recovery metrics, motivational feedback, and non-judgmental guidance 
+   in either English or Tamil.
+
+2. Healthcare Providers / Doctors / Pulmonologists:
+   Clinicians supervising smoking cessation cohorts who need real-time patient 
+   telemetry, risk stratification, slip alerts, and customizable digital 
+   intervention strategies.
+
+3. Clinical Administrators & Support Staff:
+   Clinic personnel managing patient onboarding, doctor rosters, and baseline 
+   intake data.
+
+
+4. MAIN GOALS & EXPECTED OUTCOMES
+--------------------------------------------------------------------------------
+* Break Craving Impulse Loops: 
+  Provide instant grounding using the evidence-based "4Ds" protocol (Deep Breathe, 
+  Delay, Drink Water, Distract).
+
+* Personalized Cognitive Support: 
+  Deliver adaptive Empathy (guilt-free cognitive reframing) and Aversion (medical 
+  and financial consequences) interventions powered by an AI Behavioral Engine.
+
+* Proactive Clinical Triage: 
+  Automatically identify high-risk patients (craving intensity >= 7/10 or reported 
+  slips) on the doctor dashboard for early intervention.
+
+* Long-Term Motivation & Habit Rewiring: 
+  Track and celebrate smoke-free days, money saved (in INR), avoided cigarettes, 
+  and biological health milestones, supported by a throttled gamification system.
+
+
+5. WHAT IS IN SCOPE
+--------------------------------------------------------------------------------
+A. Patient Portal:
+  - Live Recovery Dashboard: 
+    Live counters for smoke-free duration, money saved, avoided cigarettes, and 
+    validated health recovery milestones (carbon monoxide clearance, lung repair).
+  - Craving SOS Shield:
+    * 4-7-8 Breathing Pacer: Concentric multi-layer animated orb with haptic cues 
+      for vagus nerve activation.
+    * 3-Minute Delay Challenge: Interactive timer featuring dynamic reflections 
+      synthesized from live personal stats.
+    * Hydration Tracker: Interactive water intake logging addressing oral fixation.
+    * Cognitive Distraction Suite: 60-second focus puzzles and 5-4-3-2-1 sensory 
+      grounding techniques.
+  - AI Behavioral Intelligence: 
+    Dual-mode Empathy and Aversion recommendation cards using the Google Gemini API 
+    with a 100% offline rule-based heuristic clinical fallback.
+  - Daily & Bi-Weekly Assessments: 
+    Digital questionnaires monitoring mood, craving frequency, and withdrawal signs.
+  - Native Bilingual Localization: 
+    Seamless UI adaptation across English and Tamil without overflow issues.
+
+B. Doctor Portal:
+  - Patient Cohort Dashboard: 
+    Patient roster sorting, risk indicators, craving urge scales, and medical 
+    profile inspection.
+  - AI Cravings & Coping Strategy Center: 
+    Peak craving surge telemetry, coping pillar efficacy metrics, and automated 
+    dispatch rules.
+  - Clinical Prompt & Questionnaire Hub: 
+    Customizable morning/evening check-in questions and behavioral prompts.
+
+C. Administration & Platform Security:
+  - Role-based authentication (Patient, Doctor, Administrator).
+  - Encrypted local session storage using secure hardware-backed keystore/keychain.
+
+
+6. KEY MILESTONES & TIMELINE
+--------------------------------------------------------------------------------
+* Milestone 1 — Core Foundation & Tracking [Completed]:
+  User authentication, smoke-free timers, money saved algorithms, biological 
+  milestones, and basic questionnaire flow.
+
+* Milestone 2 — Dual-Portal & Doctor Dashboard [Completed]:
+  Doctor cohort interface, patient risk triaging, detail inspection, and responsive 
+  mobile layouts.
+
+* Milestone 3 — AI Behavioral Engine & Bilingual SOS Shield [Completed]:
+  Canonical trigger options, personalized dynamic reflections, 4Ds coping suite, 
+  Gemini API + offline heuristic fallback, and complete English/Tamil localization.
+
+* Milestone 4 — Cloud Telemetry & Push Notification Integration [Next Phase]:
+  Cloud database sync, automated push notifications for daily check-ins, and 
+  doctor-to-patient alerts.
+
+* Milestone 5 — Wearables & Clinical Validation [Future Phase]:
+  Smartwatch heart-rate variability (HRV) integration for early craving detection, 
+  and pilot clinical trials in hospital cessation programs.
+
+
+7. RESOURCES, DEPENDENCIES & CONSTRAINTS
+--------------------------------------------------------------------------------
+* Frontend & Framework: 
+  Flutter (Dart 3.x), Material 3, Google Fonts (Outfit & Inter), FL Chart, 
+  Flutter Animate.
+
+* State Management & Architecture: 
+  Provider pattern with separation of concerns (screens, providers, services, 
+  models, core).
+
+* Artificial Intelligence: 
+  Google Gemini Cloud API paired with an offline heuristic clinical decision engine.
+
+* Backend & Storage: 
+  REST APIs (configurable in AppConfig), shared_preferences, flutter_secure_storage.
+
+* Key Constraints:
+  - 100% Offline Capability: Craving rescue features must function completely 
+    without internet access.
+  - Cross-Language Layouts: Tamil font metrics and character lengths require flexible, 
+    wrapping, and scroll-safe components to prevent layout overflows.
+  - Anti-Abuse Gamification: Client-side cooldown timers (e.g., 15-minute throttle 
+    on point claims) prevent exploitation.
+
+
+8. OPEN QUESTIONS / DETAILS NEEDED FOR FINALIZATION
+--------------------------------------------------------------------------------
+1. Production Backend: 
+   What target server stack, cloud provider, and database will host the production 
+   API (e.g., Node.js / Python FastAPI with PostgreSQL / MySQL on AWS or GCP)?
+
+2. Push Notification Service: 
+   Will push alerts be delivered via Firebase Cloud Messaging (FCM) or OneSignal?
+
+3. Healthcare Data Compliance: 
+   Which specific compliance standards apply (e.g., India's DISHA / DPDP Act, 
+   US HIPAA, or EU GDPR)?
+
+4. Clinical Trial Partnership: 
+   Is there a specific hospital or research institution planned for the initial 
+   cohort pilot?
+================================================================================
